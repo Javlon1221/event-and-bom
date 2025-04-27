@@ -15,7 +15,9 @@ body{
     padding: 5px 20px;
 }
 h1{
-    color: white
+    color: white;
+    text-align: center;
+    margin: 20px 0;
 }
 a{
     color: black;
@@ -68,7 +70,7 @@ button{
 }
 .create_table{
     width: 800px;
-    margin: 0 auto;
+    margin: 40px auto;
     background-color:#e6e0e0 ;
     padding: 40px 0 ;
     border-radius: 20px;
@@ -106,4 +108,16 @@ button{
 .tables td {
     font-size: 16px;
     color: #333;
+}
+
+
+.create_table {
+    display: none;
+    opacity: 0;
+    transition: opacity 0.5s ease-in-out;
+}
+
+.create_table.show {
+    display: block;
+    opacity: 1;
 }

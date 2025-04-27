@@ -15,14 +15,8 @@ create_btnEl.addEventListener("click", (event) => {
         alert("Bo'sh hududni to'ldiring!"); 
         return;
     }
-
-    
     const newUser = { fname, lname };
-
-   
     users.push(newUser);
-
-    
     const tr = document.createElement("tr");
     tr.innerHTML = `
         <td>${users.length}</td>
@@ -30,7 +24,6 @@ create_btnEl.addEventListener("click", (event) => {
         <td>${newUser.lname}</td>
     `;
     tbodyEl.appendChild(tr);
-
     
     fnameInputEl.value = "";
     lnameInputEl.value = "";

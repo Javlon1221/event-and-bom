@@ -1,23 +1,23 @@
 // Login Va Parolni tekshirish
 
-// const login_btnEl = document.querySelector(".login_btn")
-// const loginEl = document.querySelector(".login")
+const login_btnEl = document.querySelector(".login_btn")
+const loginEl = document.querySelector(".login")
 
-// loginEl.addEventListener("submit", (event)=>{
-//     event.preventDefault();
-//     const loginInput = document.querySelector('.user').value;
-//     const passwordInput = document.querySelector('.password').value;
+loginEl.addEventListener("submit", (event)=>{
+    event.preventDefault();
+    const loginInput = document.querySelector('.user').value;
+    const passwordInput = document.querySelector('.password').value;
 
-//     const checkLogin = "User123";
-//     const checkPass = "Parol123";
+    const checkLogin = "User123";
+    const checkPass = "Parol123";
 
-//     if(loginInput === checkLogin && passwordInput === checkPass){
-//         window.location.href = "./html/page.html"
-//     }else{
-//         alert("Login yoki parolda xatolik bor!")
-//     }
+    if(loginInput === checkLogin && passwordInput === checkPass){
+        window.location.href = "./html/page.html"
+    }else{
+        alert("Login yoki parolda xatolik bor!")
+    }
 
-// })
+})
 
 // Tablega ma'lumot qo'shish
 
@@ -78,5 +78,5 @@ card_btnEl.addEventListener("click",(event)=>{
         <p>Lorem ipsum, dolor sit amet consectetur adipisicing.</p>
     `
     resumeEl.appendChild(card_element)
-    
+
 })

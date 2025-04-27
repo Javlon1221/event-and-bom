@@ -9,6 +9,10 @@ body{
 
     background-color: #b4b4ec;
 }
+img{
+    max-width: 100%;
+    max-height: 100%;
+}
 .container{
     max-width: 1324px;
     margin: 0 auto;
@@ -121,3 +125,47 @@ button{
     display: block;
     opacity: 1;
 }
+
+.cards{
+    padding:20px;
+    border-radius:20px;
+    width: 320px;
+    background-color: #fff;
+    text-align: center;
+    color: #be8cf8;
+    text-align: center;
+}
+.cards h2{
+    margin-bottom: 15px;
+}
+.card_btn{
+    padding: 10px 15px;
+}
+
+.resume{
+    width: 300px;
+    padding: 10px;
+    background: dodgerblue;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    gap: 20px;
+    border-radius:20px;
+    margin-top: 40px;
+}
+.resume_img{
+    width: 270px;
+    height: 270px;
+    border-radius:50%;
+    overflow: hidden;
+}
+.resume_text {
+    display: flex;
+    justify-content: center;
+    align-items:center;
+    flex-direction: column;
+    gap: 10px;
+}
+

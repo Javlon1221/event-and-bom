@@ -60,3 +60,23 @@ const createTableDiv = document.querySelector(".create_table");
 toggleCreateTableBtn.addEventListener("click", function() {
     createTableDiv.classList.toggle("show");
 });
+
+//cardni ko'rish
+
+const card_btnEl = document.querySelector(".card_btn")
+
+const cardEl = document.querySelector(".cards")
+const resumeEl = document.querySelector(".resume")
+
+card_btnEl.addEventListener("click",(event)=>{
+    event.preventDefault();
+
+    const card_element = document.createElement("div")
+    card_element.innerHTML = `
+        <h2>Jalilov Javlonbek</h2>
+        <span>Developer</span>
+        <p>Lorem ipsum, dolor sit amet consectetur adipisicing.</p>
+    `
+    resumeEl.appendChild(card_element)
+    
+})

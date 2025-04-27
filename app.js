@@ -1,67 +1,37 @@
-// Login Va Parolni tekshirish
-// document.addEventListener("DOMContentLoaded", () => {
-//     const login_btnEl = document.querySelector(".login_btn");
-//     const loginEl = document.querySelector(".login");
+const create_btnEl = document.getElementById("create_btn");
+const tbodyEl = document.querySelector("tbody");
+const users = [];
 
-//     loginEl.addEventListener("submit", (event) => {
-//         event.preventDefault();
-//         const loginInput = document.querySelector('.user').value;
-//         const passwordInput = document.querySelector('.password').value;
+create_btnEl.addEventListener("click", (event) => {
+    event.preventDefault(); 
+    const fnameInputEl = document.getElementById("fname");
+    const lnameInputEl = document.getElementById("lname");
 
-//         const checkLogin = "User123";
-//         const checkPass = "Parol123";
+    const fname = fnameInputEl.value.trim();
+    const lname = lnameInputEl.value.trim();
 
-//         if (loginInput === checkLogin && passwordInput === checkPass) {
-//             window.location.href = "./html/page.html";
-//         } else {
-//             alert("Login yoki parolda xatolik bor!");
-//         }
-//     });
-// });
-
-
-// Tablega ma'lumot qo'shish
-
-let users = [
-    {
-        fname: "Javlonbek",
-        lname: "Jalilov"
-    },
-    {
-        fname: "Jasurber",
-        lname: "Xamidov"
-    }
-]
-
-const create_btnEl = document.getElementById("create_btn")
-const tbodyEl =  document.querySelector("tbody")
-create_btnEl.addEventListener("submit", ()=>{
-    const fnameInputEl = document.getElementById("fname")
-    const lnameInputEl = document.getElementById("lname")
-
-    if (fnameInput.trim() === "" || lnameInput.trim() === "") {
-        alert("Iltimos, barcha maydonlarni to'ldiring!");
+    
+    if (fname === "" || lname === "") {
+        alert("Bo'sh hududni to'ldiring!"); 
         return;
     }
 
-    const newUser = {
-        fname: fnameInput,
-        lname: lnameInput
-    };
+    
+    const newUser = { fname, lname };
 
+   
     users.push(newUser);
 
-    tbodyEl.appendChild(users)
-
-})
-
-users.forEach((user, index)=>{
-    let tr = document.createElement("tr")
+    
+    const tr = document.createElement("tr");
     tr.innerHTML = `
-        <td>${index + 1}</td>
-        <td>${user.fname}</td>
-        <td>${user.lname}</td>
-    `
-    tbodyEl.appendChild(tr)
-    console.log(tr);
-})
+        <td>${users.length}</td>
+        <td>${newUser.fname}</td>
+        <td>${newUser.lname}</td>
+    `;
+    tbodyEl.appendChild(tr);
+
+    
+    fnameInputEl.value = "";
+    lnameInputEl.value = "";
+});

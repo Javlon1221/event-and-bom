@@ -73,3 +73,37 @@ button{
     padding: 40px 0 ;
     border-radius: 20px;
 }
+
+
+.tables {
+    width: 90%;
+    margin: 20px auto;
+    border-collapse: collapse;
+    background-color: #f9f9f9;
+    border-radius: 10px;
+}
+
+.tables th, .tables td {
+    padding: 12px 20px;
+    text-align: left;
+    border-bottom: 1px solid #ddd;
+}
+
+.tables th {
+    background-color: dodgerblue;
+    color: white;
+    text-transform: uppercase;
+}
+
+.tables tr:nth-child(even) {
+    background-color: #f2f2f2;
+}
+
+.tables tr:hover {
+    background-color: #ddd;
+}
+
+.tables td {
+    font-size: 16px;
+    color: #333;
+}

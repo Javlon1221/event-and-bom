@@ -80,3 +80,17 @@ card_btnEl.addEventListener("click",(event)=>{
     resumeEl.appendChild(card_element)
 
 })
+
+// buttonni bosganda
+// buttonni bosganda 1 qo'shish
+const btypeEl = document.querySelector(".bytype");
+const typeEl = document.querySelector(".type");
+
+let offset = 0;
+function inc() {
+    offset++;
+    if (typeEl) {
+        typeEl.innerHTML = `${offset}`;
+    }
+}
+
